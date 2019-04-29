@@ -14,7 +14,9 @@ function PostContainer(props){
                 <div className="comments">
                 {post.comments.map((e,i)=> <div><p key={i}>{e.username}</p> <p key={i}>{e.text}</p></div>)}
                 </div>
+                <div className="commentos">
                 <CommentSection />
+                </div>
 
         </div>
                 
@@ -26,7 +28,21 @@ function PostContainer(props){
 }
 
 PostContainer.propTypes={
-
+    data: PropTypes.arrayOf(
+    PropTypes.shape({
+        username: PropTypes.string.isRequired,
+        thumbnailUrl:PropTypes.string.isRequired,
+        imageUrl:PropTypes.string.isRequired,
+        likes: PropTypes.number.isRequired,
+        timestamp:PropTypes.string.isRequired,
+        comments:PropTypes.arrayOf(
+            PropTypes.shape({
+                username:PropTypes.string,
+                text:PropTypes.string,
+            })
+    )
+})
+    )
 }
 
  export default PostContainer;
