@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-// import PropTypes from 'prop-types';
+
 import dummyData from './dummy-data';
 import PostContainer from "./components/PostContainer"
+import SearchBar from "./components/SearchBar"
 
 
 class App extends React.Component {
@@ -13,19 +14,19 @@ class App extends React.Component {
        }
     }
     
-  
-  
-
-
 
   render() { 
     return ( 
       <div className="App">
+      <SearchBar />
       <PostContainer data={this.state.data} />
+
       </div>
      );
   }
 }
+
+
  
 
 

@@ -1,4 +1,6 @@
 import React from 'react';
+import CommentSection from './CommentSection';
+import PropTypes from 'prop-types';
 
 function PostContainer(props){
     return(
@@ -12,12 +14,19 @@ function PostContainer(props){
                 <div className="comments">
                 {post.comments.map((e,i)=> <div><p key={i}>{e.username}</p> <p key={i}>{e.text}</p></div>)}
                 </div>
-                </div>
+                <CommentSection />
+
+        </div>
+                
             ))}
-
-
-
+            
+            
         </div>
     )
 }
+
+PostContainer.propTypes={
+
+}
+
  export default PostContainer;
