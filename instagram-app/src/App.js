@@ -1,18 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+import dummyData from './dummy-data';
+import PostContainer from "./components/PostContainer"
 
 
-class App extends Component {
-  state = {  }
+class App extends React.Component {
+  constructor(){
+    super()
+      this.state={
+        data:dummyData,
+       }
+    }
+    
+  
+  
 
 
 
   render() { 
-    return (  );
+    return ( 
+      <div className="App">
+      <PostContainer data={this.state.data} />
+      </div>
+     );
   }
 }
  
+
+
 
 export default App;
