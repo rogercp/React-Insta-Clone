@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchBar.css';
 
   class SearchBar extends React.Component {
     constructor(props) {
@@ -33,7 +34,7 @@ import React from 'react';
             />
             <button type="submit">search</button>
             </form>
-            <i class="fab fa-instagram"></i>
+            <i class="far fa-compass"></i>
             <i class="far fa-heart"></i>
             <i class="fas fa-user-alt"></i>
             

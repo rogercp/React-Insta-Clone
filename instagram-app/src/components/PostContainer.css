@@ -1,0 +1,21 @@
+.post-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    align-items: center;
+
+}
+.thumbnail{
+    display: flex;
+    justify-content:left; 
+    align-items: center;
+}
+.thumbnail-pic{
+width: 30px;
+height: 30px;
+border-radius: 50%;
+}
+.main-pic{
+    width: 500px;
+}
