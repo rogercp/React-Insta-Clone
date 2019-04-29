@@ -23,7 +23,7 @@ import './SearchBar.css';
       return (
           <div className="search-bar">
               <i class="fab fa-instagram"></i>
-              <p>Instagram</p>
+              <h6>Instagram</h6>
             <form onSubmit={this.handleSubmit}>
             <input
                 type="text"
@@ -31,6 +31,7 @@ import './SearchBar.css';
                 id="new-search"
                 value={this.state.input}
                 onChange={this.onUpdate}
+                placeholder="...type"
             />
             <button type="submit">search</button>
             </form>

@@ -1,21 +1,36 @@
 .post-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    max-width: 501px;
     text-align: left;
-    align-items: center;
+    margin: 0 auto;
+   
 
 }
+
 .thumbnail{
-    display: flex;
-    justify-content:left; 
-    align-items: center;
+     display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    
+    
 }
 .thumbnail-pic{
 width: 30px;
 height: 30px;
 border-radius: 50%;
+margin-right: 5px;
 }
 .main-pic{
     width: 500px;
+}
+i{
+    margin: 5px;
+    font-size: 2rem;
+}
+.commentos{
+    margin-bottom:20px;
+}
+.btm-sec{
+    padding: 10px;
 }

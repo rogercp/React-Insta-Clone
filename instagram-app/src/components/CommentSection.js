@@ -1,4 +1,5 @@
 import React from 'react';
+import './CommentSection.css';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -27,6 +28,7 @@ class CommentSection extends React.Component {
             id="new-comment"
             value={this.state.input}
             onChange={this.onUpdate}
+            placeholder="...type"
           />
           <button type="submit">comment</button>
         </form>
