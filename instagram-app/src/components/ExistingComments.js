@@ -3,9 +3,9 @@ import './CommentSection.css';
 
 const ExistingComments=props=>{
 return(
-    <div>
+    <div className="inline-comments">
         <p>
-        {props.comments.username }:
+        {props.comments.username}:
         </p>
         <p>
         {props.comments.text}

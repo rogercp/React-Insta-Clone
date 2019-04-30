@@ -13,7 +13,7 @@ class Post extends React.Component{
         };
     }
 
-    addLike(){
+    addLike=()=>{
         let like=this.state.likes++;
         this.setState({like});
     }
@@ -33,6 +33,10 @@ class Post extends React.Component{
             )
             }
 }
+
+
+
+
 
  export default Post;
 

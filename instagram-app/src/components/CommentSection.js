@@ -11,14 +11,16 @@ class CommentSection extends React.Component {
         newComment:''
       };
     }
+
+
     
     render() {
       return (
         <div>
 
-          {this.state.comments.map((e,i)=><ExistingComments  comments={e} key={i}/>)}
-        
-        <form onSubmit={this.handleSubmit}>
+          {this.state.comments.map((e,i)=><ExistingComments  comments={e} key={i}/>)} 
+
+        <form >
           <input
             type="text"
             name="input"

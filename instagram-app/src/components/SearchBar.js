@@ -7,15 +7,14 @@ import './SearchBar.css';
           <div className="search-bar">
               <i class="fab fa-instagram"></i>
               <h6>Instagram</h6>
-            <form >
-            <input
-                type="text"
-                name="input"
-                id="new-search"
-                placeholder="...type"
-            />
-            <button type="submit">search</button>
-            </form>
+              <div>
+              <input onKeyDown={props.searchPosts}
+                  type="text"
+                  name="input"
+                  id="new-search"
+                  placeholder="...type"
+              />
+            </div>
             <i class="far fa-compass"></i>
             <i class="far fa-heart"></i>
             <i class="fas fa-user-alt"></i>

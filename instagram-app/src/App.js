@@ -10,6 +10,7 @@ class App extends React.Component {
     super()
       this.state={
         data:[],
+        searchPosts:[]
        }
     }
 
@@ -18,11 +19,25 @@ class App extends React.Component {
     }
   
 
+    searchPosts=e=>{
+      const data=this.state.data.filter(post=>{
+        if(post.username.includes(e.target.value)){
+          return post;
+        }
+      });
+      this.setState({searchPosts:data});
+    }
+
   render() { 
     return ( 
       <div className="App">
-      <SearchBar />
-      <PostContainer data={this.state.data} />
+      <SearchBar 
+      searchPosts={this.searchPosts}
+      searchInput={this.state.searchInput} />
+      <PostContainer 
+        data={this.state.searchPosts.length>0?this.state.searchPosts:this.state.data}
+      
+      />
 
       </div>
      );
