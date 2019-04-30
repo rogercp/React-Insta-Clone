@@ -22,12 +22,13 @@ class Post extends React.Component{
             return(
                 <div >
                      <div className="thumbnail">
-                        <img className="thumbnail-pic" src={this.props.data.thumbnailUrl} alt={this.props.data.name}/><h5>{this.props.data.username}</h5>
+                        <img className="thumbnail-pic" src={this.props.data.thumbnailUrl} alt={this.props.data.username}/><h5>{this.props.data.username}</h5>
                     </div>
                     <img className="main-pic" src={this.props.data.imageUrl}/>
                     <PostLikes likes={this.state.likes}
                     addLike={this.addLike} />
-                    <CommentSection />
+                    <CommentSection comments={this.props.data.comments} 
+                    postId={this.props.data.username}/>
                 </div>
             )
             }
