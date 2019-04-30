@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import PostContainer from "./components/PostContainer"
+import PostContainer from "./components/Post"
 import SearchBar from "./components/SearchBar"
 
 
@@ -9,10 +9,14 @@ class App extends React.Component {
   constructor(){
     super()
       this.state={
-        data:dummyData,
+        data:[],
        }
     }
-    
+
+    componentDidMount(){
+      this.setState({data:dummyData})
+    }
+  
 
   render() { 
     return ( 

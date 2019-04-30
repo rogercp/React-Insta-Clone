@@ -1,26 +1,9 @@
 import React from 'react';
 import './SearchBar.css';
 
-  class SearchBar extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        input: ""
-      };
-    }
+  const SearchBar=props=>{
     
-    onUpdate = event => {
-      this.setState({ [event.target.name]: event.target.value });
-    };
-  
-    handleSubmit = event => {
-      event.preventDefault();
-      this.props.addItem(this.state.input);
-      this.setState({ input: "" });
-    };
-  
-    render() {
-      return (
+    return (
           <div className="search-bar">
               <i class="fab fa-instagram"></i>
               <h6>Instagram</h6>
@@ -29,8 +12,6 @@ import './SearchBar.css';
                 type="text"
                 name="input"
                 id="new-search"
-                value={this.state.input}
-                onChange={this.onUpdate}
                 placeholder="...type"
             />
             <button type="submit">search</button>
@@ -43,6 +24,6 @@ import './SearchBar.css';
         </div>
       );
     }
-  }
+  
   
   export default SearchBar;
