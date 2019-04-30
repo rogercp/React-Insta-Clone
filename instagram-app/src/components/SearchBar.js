@@ -7,7 +7,7 @@ import './SearchBar.css';
           <div className="search-bar">
               <i class="fab fa-instagram"></i>
               <h6>Instagram</h6>
-            <form onSubmit={this.handleSubmit}>
+            <form >
             <input
                 type="text"
                 name="input"
