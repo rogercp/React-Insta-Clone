@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
-import dummyData from './components/dummy-data';
+import './PostContainer.css';
+import dummyData from './/dummy-data';
 import PostContainer from "./PostContainer"
-import SearchBar from "./SearchBar"
-import PostsPage from "./PostsPage"
+import SearchBar from "../navigation/SearchBar"
+
 
 
 class App extends React.Component {
@@ -40,7 +40,7 @@ class App extends React.Component {
         data={this.state.searchPosts.length>0?this.state.searchPosts:this.state.data}
       
       />
-      <PostsPage/>
+     
 
       </div>
      );
