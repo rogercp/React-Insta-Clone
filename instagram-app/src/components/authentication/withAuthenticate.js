@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Authenticate = Login => PostsPage=>
+const Authenticate = PostsPage =>Login =>
 class  extends React.Component {
     constructor(){
         super();
@@ -11,7 +11,7 @@ class  extends React.Component {
         }
     }
     componentDidMount(){
-        if(localStorage.getItem('logger')!==false){
+        if(!localStorage.getItem('logger')){
             this.setState({authorized:false})
         }else{
             this.setState({authorized:true})
@@ -21,9 +21,9 @@ class  extends React.Component {
     }
     render() { 
         if(this.state.authorized===true){
-            return <PostsPage/>;
+            return <PostsPage />;
         }else{
-            return <Login/>
+            return <Login />
         }
          
            
