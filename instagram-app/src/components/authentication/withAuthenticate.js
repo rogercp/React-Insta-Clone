@@ -1,20 +1,33 @@
-// import React from 'react';
-
-// class Authenticate extends React.Component {
-//     constructor(){
-//         super();
-//         state = {  
+import React from 'react';
 
 
-//         }
-//     }
-    
-//     render() { 
-//         return (  
+const Authenticate = Login => PostsPage=>
+class  extends React.Component {
+    constructor(){
+        super();
+        this.state = {  
+        authorized:false
+
+        }
+    }
+    componentDidMount(){
+        if(localStorage.getItem('logger')!==false){
+            this.setState({authorized:false})
+        }else{
+            this.setState({authorized:true})
+        }
 
 
-//         );
-//     }
-// }
+    }
+    render() { 
+        if(this.state.authorized===true){
+            return <PostsPage/>;
+        }else{
+            return <Login/>
+        }
+         
+           
+    }
+}
  
-// export default Authenticate;
+export default Authenticate;

@@ -10,7 +10,22 @@ class Login extends React.Component {
 
         }
     }
-    
+
+    onChange=e=>{
+        this.setState({
+            [e.target.name]:e.target.value
+        })
+
+    }
+
+
+    loginSubmission=e=>{
+     let logger=this.state.username;
+     localStorage.setItem('logger',logger);
+     window.location.reload();
+    }
+
+
     render() { 
         return (  
             <div className="login-page">
@@ -20,17 +35,19 @@ class Login extends React.Component {
                 <form>
                 
                 <input
-                placeholder="username"
+                placeholder="...username"
                 value={this.state.username}
                 name="username"
+                onChange={this.onChange}
                 />
                 <input
-                placeholder="password"
+                placeholder="...password"
                 value={this.state.password}
                 name="password"
+                onChange={this.onChange}
                 />
 
-                <button type="submit">Login</button>
+                <button type="submit" onClick={this.loginSubmission}>Login</button>
                 
                 </form>
                 
