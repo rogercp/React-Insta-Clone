@@ -17,3 +17,14 @@ button:hover{
 background-color:white;
 color: black;
 }
+.inline-comments{
+display: flex;
+
+}
+input{
+    margin-right:5px;
+    margin-left:5px;
+}
+p{
+    margin-right: 5px;
+}
