@@ -5,7 +5,7 @@ import Login from './components/login/Login';
 import Authenticate from './components/authentication/withAuthenticate';
 
 
-const TheAuthentication=Authenticate(Login)(PostsPage);
+const TheAuthentication=Authenticate(PostsPage)(Login);
 
 class App extends React.Component{
   constructor(){

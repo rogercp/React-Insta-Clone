@@ -24,7 +24,7 @@ class Post extends React.Component{
                      <div className="thumbnail">
                         <img className="thumbnail-pic" src={this.props.data.thumbnailUrl} alt={this.props.data.username}/><h5>{this.props.data.username}</h5>
                     </div>
-                    <img className="main-pic" src={this.props.data.imageUrl}/>
+                    <img className="main-pic" alt={this.props.data.username} src={this.props.data.imageUrl}/>
                     <div className="btm-sec">
                     <PostLikes likes={this.state.likes}
                     addLike={this.addLike} />
