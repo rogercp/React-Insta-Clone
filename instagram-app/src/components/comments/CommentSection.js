@@ -22,7 +22,7 @@ class CommentSection extends React.Component {
               const newComment = {  username: 'rognelius', text: this.state.newComment };
               const comments = this.state.comments.slice();
               comments.push(newComment);
-              this.setState({ comments, comment: '' });
+              this.setState({ comments, newComment: '' });
             }
 
 
@@ -33,7 +33,6 @@ class CommentSection extends React.Component {
           {this.state.comments.map((e,i)=><ExistingComments  comments={e} key={i}/>)} 
 
         <form onSubmit={this.submitComment}>
-        
           <input
             type="text"
             name="input"

@@ -5,20 +5,22 @@ import './SearchBar.css';
     
     return (
           <div className="search-bar">
-              <i class="fab fa-instagram"></i>
+              <i className="fab fa-instagram"></i>
               <h6>Instagram</h6>
-              <div>
 
+              <div>
+            
               <input onKeyDown={props.searchPosts}
                   type="text"
                   name="input"
                   id="new-search"
                   placeholder="...type"/>
+
             </div>
 
-            <i class="far fa-compass"></i>
-            <i class="far fa-heart"></i>
-            <i class="fas fa-user-alt"></i>
+            <i className="far fa-compass"></i>
+            <i className="far fa-heart"></i>
+            <i className="fas fa-user-alt"></i>
             
 
         </div>

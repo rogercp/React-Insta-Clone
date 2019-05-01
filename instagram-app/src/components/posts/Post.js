@@ -38,10 +38,12 @@ class Post extends React.Component{
 
 
 Post.propTypes=({
-    post:PropTypes.shape({
+    data:PropTypes.shape({
         username:PropTypes.string,
         thumbnailUrl:PropTypes.string,
         imageUrl:PropTypes.string,
+        likes:PropTypes.number,
+        timestamp:PropTypes.string
     })
 })
 
