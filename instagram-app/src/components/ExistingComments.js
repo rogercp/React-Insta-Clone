@@ -5,7 +5,7 @@ const ExistingComments=props=>{
 return(
     <div className="inline-comments">
         <p>
-        {props.comments.username}:
+       <strong>{props.comments.username}:</strong> 
         </p>
         <p>
         {props.comments.text}
