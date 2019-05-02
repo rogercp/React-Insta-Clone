@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentSection from './CommentSection';
+import CommentSection from '../comments/CommentSection';
 import PropTypes from 'prop-types';
 import './PostContainer.css';
 import PostLikes from './PostLikes';
@@ -24,7 +24,7 @@ class Post extends React.Component{
                      <div className="thumbnail">
                         <img className="thumbnail-pic" src={this.props.data.thumbnailUrl} alt={this.props.data.username}/><h5>{this.props.data.username}</h5>
                     </div>
-                    <img className="main-pic" src={this.props.data.imageUrl}/>
+                    <img className="main-pic" alt={this.props.data.username} src={this.props.data.imageUrl}/>
                     <div className="btm-sec">
                     <PostLikes likes={this.state.likes}
                     addLike={this.addLike} />
@@ -38,10 +38,12 @@ class Post extends React.Component{
 
 
 Post.propTypes=({
-    post:PropTypes.shape({
+    data:PropTypes.shape({
         username:PropTypes.string,
         thumbnailUrl:PropTypes.string,
         imageUrl:PropTypes.string,
+        likes:PropTypes.number,
+        timestamp:PropTypes.string
     })
 })
 
