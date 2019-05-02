@@ -1,11 +1,11 @@
 import React from 'react';
-import './SearchBar.css';
+
 import styled from 'styled-components'
+import Icons from '../styles/Icons';
 
 
 
-
-const SearchStyles=styled.div`
+const Header=styled.div`
  display: flex;
     justify-content: space-around;
     align-items: center;
@@ -14,13 +14,18 @@ const SearchStyles=styled.div`
 `
 
 
+
+
+
+
   const SearchBar=props=>{
     
     return (
-          <SearchStyles>
-              <i className="fab fa-instagram"></i>
+          <Header>
+           
+              <Icons  className="fab fa-instagram"></Icons>
               <h6 style={{fontSize:'1.8rem'}}>Instagram</h6>
-
+              
               <div>
             
               <input onKeyDown={props.searchPosts}
@@ -31,12 +36,12 @@ const SearchStyles=styled.div`
 
             </div>
 
-            <i className="far fa-compass"></i>
-            <i className="far fa-heart"></i>
-            <i className="fas fa-user-alt"></i>
+            <Icons className="far fa-compass"></Icons>
+            <Icons className="far fa-heart"></Icons>
+            <Icons className="fas fa-user-alt"></Icons>
             
 
-        </SearchStyles>
+        </Header>
       );
     }
   

@@ -3,6 +3,23 @@ import CommentSection from '../comments/CommentSection';
 import PropTypes from 'prop-types';
 import './PostContainer.css';
 import PostLikes from './PostLikes';
+import styled from 'styled-components'
+import Bolder from '../styles/Bolder'
+
+
+const ThumbNail=styled.div`
+     display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    margin-bottom:10px;
+    .thumbnail-pic{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    }
+`
+
 
 class Post extends React.Component{
 
@@ -20,12 +37,12 @@ class Post extends React.Component{
 
     render(){
             return(
-                <div className="postie">
-                     <div className="thumbnail">
-                        <img className="thumbnail-pic" src={this.props.data.thumbnailUrl} alt={this.props.data.username}/><h5>{this.props.data.username}</h5>
-                    </div>
-                    <img className="main-pic" alt={this.props.data.username} src={this.props.data.imageUrl}/>
-                    <div className="btm-sec">
+                <div style={{ marginBottom: '20px'}}>
+                     <ThumbNail>
+                        <img className="thumbnail-pic" src={this.props.data.thumbnailUrl} alt={this.props.data.username}/><Bolder>{this.props.data.username}</Bolder>
+                    </ThumbNail>
+                    <img className="main-pic" style={{ width: '500px'}}alt={this.props.data.username} src={this.props.data.imageUrl}/>
+                    <div style={{padding: '10px'}}>
                     <PostLikes likes={this.state.likes}
                     addLike={this.addLike} />
                     <CommentSection comments={this.props.data.comments} 

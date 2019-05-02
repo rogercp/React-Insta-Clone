@@ -1,5 +1,7 @@
 import React from 'react';
 import './PostContainer.css';
+import Bolder from '../styles/Bolder'
+import Icons from '../styles/Icons';
 
 const PostLikes=props=>{
     return (
@@ -7,12 +9,12 @@ const PostLikes=props=>{
                 key="likes-logo"
                 >
                 <div className="like-container">
-                <i onClick={props.addLike} className="far fa-heart" />
-                <i className="far fa-comment" />
+                <Icons onClick={props.addLike} className="far fa-heart" />
+                <Icons className="far fa-comment" />
                 </div>
             
-            <div className="like-sec" key="like-counter">
-                <div className="like-section-wrapper"><strong>{props.likes} likes</strong></div>
+            <div style={{ paddingTop: '15px'}} key="like-counter">
+                <div className="like-section-wrapper"><Bolder>{props.likes} likes</Bolder></div>
             </div>
             </div>
     );

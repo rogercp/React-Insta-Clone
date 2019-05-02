@@ -1,13 +1,14 @@
 import React from 'react';
 import './CommentSection.css';
 import PropTypes from 'prop-types';
+import Bolder from '../styles/Bolder'
 
 
 const ExistingComments=props=>{
 return(
     <div className="inline-comments">
         <p>
-       <strong>{props.comments.username}:</strong> 
+       <Bolder>{props.comments.username}:</Bolder> 
         </p>
         <p>
         {props.comments.text}

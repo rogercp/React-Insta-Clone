@@ -31,7 +31,7 @@ class App extends React.Component {
 
   render() { 
     return ( 
-      <div className="App">
+      <div>
       <SearchBar 
       searchPosts={this.searchPosts}
       // searchInput={this.state.searchInput} 
