@@ -1,12 +1,25 @@
 import React from 'react';
 import './SearchBar.css';
+import styled from 'styled-components'
+
+
+
+
+const SearchStyles=styled.div`
+ display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: -10px;
+`
+
 
   const SearchBar=props=>{
     
     return (
-          <div className="search-bar">
+          <SearchStyles>
               <i className="fab fa-instagram"></i>
-              <h6>Instagram</h6>
+              <h6 style={{fontSize:'1.8rem'}}>Instagram</h6>
 
               <div>
             
@@ -23,7 +36,7 @@ import './SearchBar.css';
             <i className="fas fa-user-alt"></i>
             
 
-        </div>
+        </SearchStyles>
       );
     }
   

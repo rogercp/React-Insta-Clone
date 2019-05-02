@@ -7,6 +7,7 @@ import Authenticate from './components/authentication/withAuthenticate';
 
 const TheAuthentication=Authenticate(PostsPage)(Login);
 
+
 class App extends React.Component{
   constructor(){
     super();
@@ -15,9 +16,10 @@ class App extends React.Component{
 
   render(){
     return (
-      <div className="App">
+      <div className="app">
       <TheAuthentication/>
       </div>
+      
     )
   }
 }

@@ -19,11 +19,11 @@ class Login extends React.Component {
     }
 
 
-    // loginSubmission=e=>{
-    //  const logger=this.state.username;
-    //  localStorage.setItem('logger',logger);
-    //  window.location.reload();
-    // }
+    loginSubmission=e=>{
+     const logger=this.state.username;
+     localStorage.setItem('logger',logger);
+     window.location.reload();
+    }
 
 
     render() { 
