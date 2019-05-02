@@ -1,5 +1,5 @@
 import React from 'react';
-import './PostContainer.css';
+
 import Bolder from '../styles/Bolder'
 import Icons from '../styles/Icons';
 

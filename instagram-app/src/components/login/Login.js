@@ -1,5 +1,14 @@
 import React from 'react';
-import './login.css';
+
+import styled from 'styled-components'
+
+
+const LoginPage=styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+`
 
 class Login extends React.Component {
     constructor(props){
@@ -28,7 +37,7 @@ class Login extends React.Component {
 
     render() { 
         return (  
-            <div className="login-page">
+            <LoginPage>
 
                 <h1>Instagram</h1>
 
@@ -52,7 +61,7 @@ class Login extends React.Component {
                 </form>
                 
 
-            </div>
+            </LoginPage>
         );
     }
 }

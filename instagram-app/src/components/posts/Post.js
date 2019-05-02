@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentSection from '../comments/CommentSection';
 import PropTypes from 'prop-types';
-import './PostContainer.css';
+
 import PostLikes from './PostLikes';
 import styled from 'styled-components'
 import Bolder from '../styles/Bolder'
@@ -39,7 +39,7 @@ class Post extends React.Component{
             return(
                 <div style={{ marginBottom: '20px'}}>
                      <ThumbNail>
-                        <img className="thumbnail-pic" src={this.props.data.thumbnailUrl} alt={this.props.data.username}/><Bolder>{this.props.data.username}</Bolder>
+                        <img  className="thumbnail-pic"src={this.props.data.thumbnailUrl} alt={this.props.data.username}/><Bolder>{this.props.data.username}</Bolder>
                     </ThumbNail>
                     <img className="main-pic" style={{ width: '500px'}}alt={this.props.data.username} src={this.props.data.imageUrl}/>
                     <div style={{padding: '10px'}}>

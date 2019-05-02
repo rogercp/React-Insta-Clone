@@ -1,6 +1,6 @@
 import React from 'react';
 import Post from './Post';
-import './PostContainer.css';
+
 import styled from 'styled-components'
 
 
