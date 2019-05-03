@@ -1,13 +1,31 @@
 import React from 'react';
-import './SearchBar.css';
+
+import styled from 'styled-components'
+import Icons from '../styles/Icons';
+
+
+
+const Header=styled.div`
+ display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: -10px;
+`
+
+
+
+
+
 
   const SearchBar=props=>{
     
     return (
-          <div className="search-bar">
-              <i className="fab fa-instagram"></i>
-              <h6>Instagram</h6>
-
+          <Header>
+           
+              <Icons  className="fab fa-instagram"></Icons>
+              <h6 style={{fontSize:'1.8rem'}}>Instagram</h6>
+              
               <div>
             
               <input onKeyDown={props.searchPosts}
@@ -18,12 +36,12 @@ import './SearchBar.css';
 
             </div>
 
-            <i className="far fa-compass"></i>
-            <i className="far fa-heart"></i>
-            <i className="fas fa-user-alt"></i>
+            <Icons className="far fa-compass"></Icons>
+            <Icons className="far fa-heart"></Icons>
+            <Icons className="fas fa-user-alt"></Icons>
             
 
-        </div>
+        </Header>
       );
     }
   

@@ -1,7 +1,20 @@
 import React from 'react';
-import './CommentSection.css';
 import ExistingComments from './ExistingComments';
 import PropTypes from 'prop-types';
+import styled from 'styled-components'
+import Button from '../styles/Button'
+
+
+
+
+const Inp=styled.input`
+  flex: 8;
+  border: none;
+  border-bottom: 2px solid black;
+  margin-right:5px;
+  margin-left:5px;
+`
+
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -32,8 +45,8 @@ class CommentSection extends React.Component {
 
           {this.state.comments.map((e,i)=><ExistingComments  comments={e} key={i}/>)} 
 
-        <form onSubmit={this.submitComment}>
-          <input
+        <form style={{display:'flex'}}onSubmit={this.submitComment}>
+          <Inp
             type="text"
             name="input"
             id="new-comment"
@@ -41,7 +54,7 @@ class CommentSection extends React.Component {
             placeholder="...comment"
             onChange={this.onChange}
           />
-          <button>comment</button>
+          <Button>comment</Button>
         </form>
       
       </div>

@@ -1,15 +1,15 @@
 import React from 'react';
-import './CommentSection.css';
 import PropTypes from 'prop-types';
+import Bolder from '../styles/Bolder'
 
 
 const ExistingComments=props=>{
 return(
-    <div className="inline-comments">
-        <p>
-       <strong>{props.comments.username}:</strong> 
+    <div className="inline-comments" style={{display:'flex'}}>
+        <p style={{marginRight:'15px'}}>
+       <Bolder>{props.comments.username}:</Bolder> 
         </p>
-        <p>
+        <p style={{marginRight:'15px'}}>
         {props.comments.text}
         </p>
     </div>

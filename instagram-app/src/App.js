@@ -1,11 +1,18 @@
 import React from 'react';
-import './App.css';
 import PostsPage from "./components/posts/PostsPage"
 import Login from './components/login/Login';
 import Authenticate from './components/authentication/withAuthenticate';
-
+import styled from 'styled-components'
 
 const TheAuthentication=Authenticate(PostsPage)(Login);
+
+const AppCss=styled.div`
+text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  justify-content: center;
+`
 
 class App extends React.Component{
   constructor(){
@@ -15,9 +22,10 @@ class App extends React.Component{
 
   render(){
     return (
-      <div className="App">
+      <AppCss>
       <TheAuthentication/>
-      </div>
+      </AppCss>
+      
     )
   }
 }

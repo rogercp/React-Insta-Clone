@@ -22,9 +22,7 @@ class  extends React.Component {
             return <PostsPage />;
         }
         return <Login />
-        
-         
-           
+             
     }
 }
  

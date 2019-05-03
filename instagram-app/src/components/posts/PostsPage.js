@@ -1,5 +1,5 @@
 import React from 'react';
-import './PostContainer.css';
+
 import dummyData from './/dummy-data';
 import PostContainer from "./PostContainer"
 import SearchBar from "../navigation/SearchBar"
@@ -31,7 +31,7 @@ class App extends React.Component {
 
   render() { 
     return ( 
-      <div className="App">
+      <div>
       <SearchBar 
       searchPosts={this.searchPosts}
       // searchInput={this.state.searchInput} 
